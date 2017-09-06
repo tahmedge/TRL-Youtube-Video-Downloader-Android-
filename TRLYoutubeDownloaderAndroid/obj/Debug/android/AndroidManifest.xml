@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="YoutubeDownloaderAndroid.YoutubeDownloaderAndroid" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
+  <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="19" />
+  <application android:label="YoutubeDownloaderAndroid" android:icon="@drawable/icon" android:name="mono.android.app.Application" android:debuggable="true">
+    <activity android:icon="@drawable/icon" android:label="YoutubeDownloaderAndroid" android:name="md56072bf371898e260b14238072478469d.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="YoutubeDownloaderAndroid.YoutubeDownloaderAndroid.mono.MonoRuntimeProvider.__mono_init__" />
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.YoutubeDownloaderAndroid.YoutubeDownloaderAndroid" />
+      </intent-filter>
+    </receiver>
+  </application>
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+</manifest>
